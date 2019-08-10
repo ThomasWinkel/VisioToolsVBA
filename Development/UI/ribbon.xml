@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Icon Galery (imageMso="Icon") can be downloaded from Microsoft:
+https://www.microsoft.com/en-us/download/details.aspx?id=21103
+-->
+
+<customUI onLoad="OnRibbonLoad" xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+	<ribbon>
+		<tabs>
+			<tab id="tabWit" label="wit">
+				<group id="groupEdit" label="Edit">
+					<button id="arrangeSelectedShapes" label="Arrange Selection" supertip="Arrange selected shapes." size="large" imageMso="ObjectsArrangeRight" onAction="Button_OnAction"/>
+					<splitButton id="splitButtonSelection" size="large" >
+						<menu id="menuSelection" >
+							<button id="selectSameShapes" label="Select same Shapes" supertip="Select same shapes as primary Item on page / in selection." imageMso="AdpDiagramArrangeSelection" onAction="Button_OnAction"/>
+							<button id="selectSameShapesVertical" label="Select same Shapes vertical" supertip="Same as above, but only shapes vertical to primary item." imageMso="AdpDiagramAutosizeSelectedTables" onAction="Button_OnAction"/>
+							<button id="selectConnectedShapes" label="Select connected Shapes" supertip="Select all shapes that are connected recursively." imageMso="AdpDiagramArrangeSelection" onAction="Button_OnAction"/>
+							<button id="selectionMask" label="Selection Mask" supertip="Define custom selection criterias." imageMso="SelectContents" onAction="Button_OnAction"/>
+							<button id="countSelectedShapes" label="Count selected Shapes" supertip="Count selected shapes." imageMso="CostResourceInsert" onAction="Button_OnAction"/>
+						</menu>
+					</splitButton>
+					<button id="findReplace" label="Find and Replace" supertip="Find and replace text in shape data or text." size="large" imageMso="FindText" onAction="Button_OnAction"/>
+				</group>
+				<group id="groupTools" label="Tools">
+					<button id="fitPages" label="Fit Pages" supertip="Fit Pages to Screen." size="large" imageMso="ListView" onAction="Button_OnAction"/>
+					<button id="VisioDiff" label="Visio Diff" supertip="Compares two Visio documents." size="large" imageMso="CompareProjects" onAction="Button_OnAction"/>
+				</group>
+				<group id="groupData" label="Data">
+					<button id="exportDataRecordSets" label="Export DataRecordSets" supertip="Export DataRecordSets to Excel" size="large" imageMso="MicrosoftExcel" onAction="Button_OnAction"/>
+				</group>
+				<group id="groupHelp" label="Help">
+					<button id="About" label="About" supertip="About" size="large" imageMso="Help" onAction="Button_OnAction"/>
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
